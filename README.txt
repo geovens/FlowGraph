@@ -2,6 +2,8 @@
 
 FlowGraph is a visual variable debug tool that show variable values against time with graphs. I use FlowGraph to do debug things in other projects and benefit a lot from it.
 
+![screenshot](https://github.com/geovens/FlowGraph/blob/master/t165.gif)
+
 To use FlowGraph in your C++ project, include flowgraph.h, link flowgraph.lib and use flowgraph.dll. See flowgraph.h for APIs. The most important API is FlowValue(), play around with it to start.
 
 To use FlowGraph in your C#/VB project, add a reference of flowgraph.net.dll in your project and copy flowgraph.dll beside your excutables. All APIs are static functions in FlowGraph class under namespace FlowGraphNet. See sample_csharp project as an example on how to use.
