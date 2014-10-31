@@ -2,7 +2,7 @@
 
 FlowGraph is a visual variable debug tool that show variable values against time with graphs. I use FlowGraph to do debug things in other projects and benefit a lot from it.
 
-![screenshot](https://github.com/geovens/FlowGraph/blob/master/t165.gif)
+![screenshot](https://raw.githubusercontent.com/geovens/FlowGraph/master/t165.gif)
 
 To use FlowGraph in your C++ project, include flowgraph.h, link flowgraph.lib and use flowgraph.dll. See flowgraph.h for APIs. The most important API is FlowValue(), play around with it to start.
 
