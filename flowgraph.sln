@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flowgraph", "flowgraph\flowgraph.vcxproj", "{D7A0E2F9-B71B-469E-AF09-BA3F6212744D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "flowgraph.net", "flowgraph.net\flowgraph.net.csproj", "{E56A02A8-7B30-4A52-8FBA-B12AA449E98D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7A0E2F9-B71B-469E-AF09-BA3F6212744D} = {D7A0E2F9-B71B-469E-AF09-BA3F6212744D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sample_csharp", "sample_csharp\sample_csharp.csproj", "{E80612B7-F6D4-46E5-80A3-15E5316DF8E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7A0E2F9-B71B-469E-AF09-BA3F6212744D}.Release|x64.ActiveCfg = Release|x64
+		{D7A0E2F9-B71B-469E-AF09-BA3F6212744D}.Release|x64.Build.0 = Release|x64
+		{D7A0E2F9-B71B-469E-AF09-BA3F6212744D}.Release|x86.ActiveCfg = Release|Win32
+		{D7A0E2F9-B71B-469E-AF09-BA3F6212744D}.Release|x86.Build.0 = Release|Win32
+		{E56A02A8-7B30-4A52-8FBA-B12AA449E98D}.Release|x64.ActiveCfg = Release|Any CPU
+		{E56A02A8-7B30-4A52-8FBA-B12AA449E98D}.Release|x64.Build.0 = Release|Any CPU
+		{E56A02A8-7B30-4A52-8FBA-B12AA449E98D}.Release|x86.ActiveCfg = Release|Any CPU
+		{E56A02A8-7B30-4A52-8FBA-B12AA449E98D}.Release|x86.Build.0 = Release|Any CPU
+		{E80612B7-F6D4-46E5-80A3-15E5316DF8E0}.Release|x64.ActiveCfg = Release|x64
+		{E80612B7-F6D4-46E5-80A3-15E5316DF8E0}.Release|x64.Build.0 = Release|x64
+		{E80612B7-F6D4-46E5-80A3-15E5316DF8E0}.Release|x86.ActiveCfg = Release|x86
+		{E80612B7-F6D4-46E5-80A3-15E5316DF8E0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
