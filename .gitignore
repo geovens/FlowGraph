@@ -1,0 +1,7 @@
+lib/opencv2/x86/*.lib
+lib/opencv2/x64/*.lib
+build/
+*.pdb
+*.exp
+flowgraph.sdf
+flowgraph.v12.suo
