@@ -206,8 +206,8 @@ void DrawViewMode1(Graph* thegraph)
 		sprintf_s(minytext, "%.1e", thegraph->BottomBoundary);
 		sprintf_s(maxytext, "%.1e", thegraph->TopBoundary);
 	}
-	cv::putText(thegraph->Dot, minytext, cv::Point(thegraph->Dot.cols - 10 * strlen(minytext) - 20, thegraph->Back.rows - 6), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cv::Scalar(120, 120, 120, 0));
-	cv::putText(thegraph->Dot, maxytext, cv::Point(thegraph->Dot.cols - 10 * strlen(maxytext) - 20, 15), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cv::Scalar(120, 120, 120, 0));
+	cv::putText(thegraph->Dot, minytext, cv::Point(thegraph->Dot.cols - 10 * (int)strlen(minytext) - 20, thegraph->Back.rows - 6), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cv::Scalar(120, 120, 120, 0));
+	cv::putText(thegraph->Dot, maxytext, cv::Point(thegraph->Dot.cols - 10 * (int)strlen(maxytext) - 20, 15), cv::FONT_HERSHEY_COMPLEX_SMALL, 0.8, cv::Scalar(120, 120, 120, 0));
 
 	// »­ÇúÏß
 	int c = 0;
@@ -260,8 +260,8 @@ void DrawViewMode2(Graph* thegraph)
 {
 	if (500 != thegraph->Dot.cols || thegraph->Curves.size() * 25 + 40 != thegraph->Dot.rows)
 	{
-		thegraph->Dot = cv::Mat::zeros(thegraph->Curves.size() * 25 + 40, 500, CV_8UC4);
-		thegraph->Back = cv::Mat::zeros(thegraph->Curves.size() * 25 + 40, 500, CV_8UC4);
+		thegraph->Dot = cv::Mat::zeros((int)thegraph->Curves.size() * 25 + 40, 500, CV_8UC4);
+		thegraph->Back = cv::Mat::zeros((int)thegraph->Curves.size() * 25 + 40, 500, CV_8UC4);
 		PlotMesh(thegraph, 2);
 	}
 	if (thegraph->NeedPlotMesh)
@@ -404,7 +404,7 @@ void PlotMesh(Graph* graph, int viewmode)
 	}
 	else if (viewmode == 2)
 	{
-		int curvecount = graph->Curves.size();
+		int curvecount = (int)graph->Curves.size();
 		cv::line(graph->Back, cv::Point(200, 20), cv::Point(200, curvecount * 25 + 20), cv::Scalar(60, 60, 60, 0));
 		cv::line(graph->Back, cv::Point(300, 20), cv::Point(300, curvecount * 25 + 20), cv::Scalar(60, 60, 60, 0));
 		cv::line(graph->Back, cv::Point(400, 20), cv::Point(400, curvecount * 25 + 20), cv::Scalar(60, 60, 60, 0));
