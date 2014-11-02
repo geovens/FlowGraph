@@ -5,3 +5,4 @@ build/
 *.exp
 flowgraph.sdf
 flowgraph.v12.suo
+flowgraph.opensdf

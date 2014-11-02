@@ -238,8 +238,8 @@ void DrawViewMode1(Graph* thegraph)
 				if (abmax > thegraph->TopBoundary)
 					abmax = thegraph->TopBoundary;
 			}
-			int hmin = (abmin - thegraph->BottomBoundary) / (thegraph->TopBoundary - thegraph->BottomBoundary) * thegraph->Height;
-			int hmax = (abmax - thegraph->BottomBoundary) / (thegraph->TopBoundary - thegraph->BottomBoundary) * thegraph->Height;
+			int hmin = (int)((abmin - thegraph->BottomBoundary) / (thegraph->TopBoundary - thegraph->BottomBoundary) * thegraph->Height);
+			int hmax = (int)((abmax - thegraph->BottomBoundary) / (thegraph->TopBoundary - thegraph->BottomBoundary) * thegraph->Height);
 			int tH = thegraph->Height;
 			for (int h = hmin; h <= hmax; h++)
 			if (h >= 0 && h <= tH)
@@ -441,7 +441,7 @@ DWORD WINAPI ThreadUpdate(LPVOID lpParameter)
 			int nowtime = GetTickCount();
 			while (nowtime - thegraph->LastUpdateTime > 1000.0 / thegraph->Speed)
 			{
-				thegraph->LastUpdateTime += 1000.0 / thegraph->Speed;
+				thegraph->LastUpdateTime += (int)(1000.0 / thegraph->Speed);
 
 				for (std::list<Curve>::iterator it = thegraph->Curves.begin(); it != thegraph->Curves.end(); it++)
 				{
