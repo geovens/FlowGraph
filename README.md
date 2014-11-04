@@ -9,7 +9,9 @@
 pre-build binaries are provided in 'bin' folder.  
   
 To use FlowGraph in your C++ project, include flowgraph.h, link flowgraph.lib and use flowgraph.dll. See flowgraph.h for APIs. The most important API is 
+
      FlowValue(std::wstring variablename, double value)
+
 which could do most of the works even if used solo.  
 
 To use FlowGraph in your C#/VB project, add a reference to flowgraph.net.dll in your project and copy flowgraph.dll beside your excutables. All APIs are static functions in 'FlowGraph' class under 'FlowGraphNet' namespace. See 'sample_csharp' project as an example on how to use.
