@@ -78,7 +78,11 @@ DWORD WINAPI ThreadShow(LPVOID lpParameter)
 
 		//do
 		{
-			int k = cv::waitKey(10);
+			int k = 0;
+			if (Graphs.size() == 0)
+				Sleep(10);
+			else
+				k = cv::waitKey(10);
 			if (k == ' ')
 			{
 				FlowPause(!Paused);
@@ -828,8 +832,6 @@ extern "C" __declspec(dllexport) void FlowValue(const wchar_t* curvename, double
 {
 	if (!Running)
 		FlowStart();
-	//if (RunPaused)
-	//	return;
 	
 	Graph* thegraph;
 	Curve* thecurve = NULL;
