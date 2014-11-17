@@ -928,7 +928,8 @@ extern "C" __declspec(dllexport) void FlowStart()
 {
 	if (Running)
 	{
-		FlowStop();
+		return;
+		//FlowStop();
 	}
 	Running = true;
 	timeBeginPeriod(1);
